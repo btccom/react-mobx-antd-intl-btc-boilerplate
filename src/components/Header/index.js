@@ -25,25 +25,26 @@ class Header extends Component {
   handleSearchInputChange = value => {
     if (value) {
       //this.store.setSearchClickable(false);
-      this.store.getSearchSuggestionList(value);
+      //this.store.getSearchSuggestionList(value);
     }
   };
 
   handleSearch = (keyword, isToken) => {
-    if (isToken) {
-      this.props.history.push({
-        pathname: `/tokeninfo/${keyword}`,
-        state: 'changetoken'
-      });
-    } else {
-      this.props.history.push({
-        pathname: `/search/${encodeURIComponent(keyword)}`
-      });
-    }
+    // if (isToken) {
+    //   this.props.history.push({
+    //     pathname: `/tokeninfo/${keyword}`,
+    //     state: 'changetoken'
+    //   });
+    // } else {
+    //   this.props.history.push({
+    //     pathname: `/search/${encodeURIComponent(keyword)}`
+    //   });
+    // }
   };
 
   render() {
-    const { searchSuggestionList } = this.store;
+    //const { searchSuggestionList } = this.store;
+    const searchSuggestionList = [];
     return (
       <div className="header">
         <div className="view-width">

@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
-import {
-  formatNumber,
-  ether2GWei,
-  second2Relative,
-  handlerToByte
-} from 'utils';
 import Ts from 'Trans';
 
 import './index.scss';
@@ -25,8 +19,10 @@ export default class Demo extends Component {
     const { lang } = this.appStore;
 
     return (
-      <div>
-        <Ts transKey="pages.demo.title" />
+      <div className="view-width page-container">
+        <h2>
+          <Ts transKey="pages.demo.title" />
+        </h2>
       </div>
     );
   }
