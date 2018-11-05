@@ -1,0 +1,28 @@
+$themes: (
+  light: (
+    //color:
+    primaryColor: rgba(91,100,161,1),
+    bodyBackgroundColor:rgba(240,242,245,1),
+    sideBackgroundColor:rgba(240,242,245,1),
+    sideMenuBackgroundColor:rgba(240,242,245,1),
+    sideMenuItemSelectBackgroundColor:rgba(224,202,255,.2),
+    contentBackgroundColor:rgba(255,255,255,1),
+    primaryTextColor:rgba(0,0,0,0.85),
+    secondaryTextColor:rgba(0,0,0,0.65),
+    tertiaryTextColor:rgba(0,0,0,0.45),
+    linkTextColor:#5B64A1,
+  ),
+  dark: (
+     //color:
+     primaryColor: rgba(91,100,161,1),
+     bodyBackgroundColor:rgba(10,10,10,1),
+     sideBackgroundColor:rgba(240,242,245,1),
+     sideMenuBackgroundColor:rgba(240,242,245,1),
+     sideMenuItemSelectBackgroundColor:rgba(224,202,255,.2),
+     contentBackgroundColor:rgba(10,10,10,1),
+     primaryTextColor:#c00,
+     secondaryTextColor:rgba(0,0,0,0.65),
+     tertiaryTextColor:rgba(0,0,0,0.45),
+     linkTextColor:#5B64A1,
+  ),
+);

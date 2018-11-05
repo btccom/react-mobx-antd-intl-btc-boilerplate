@@ -1,0 +1,29 @@
+.simple-list-table {
+  .ant-table.ant-table-small {
+    border: 0;
+    & > .ant-table-content {
+      &>.ant-table-body{
+        margin: 0;
+        tr{
+            td{
+              padding-top: 0;
+              padding-bottom: 4px;
+            }
+          
+        }
+       
+      }
+      &>.ant-table-body > table{
+        padding: 0;
+      }
+      & > .ant-table-body > table > .ant-table-tbody > tr > td {
+        padding-left: 3px;
+        padding-right: 3px;
+        border-bottom: 0;
+      }
+      tr>td:first-child{
+        padding-left: 0
+      }
+    }
+  }
+}

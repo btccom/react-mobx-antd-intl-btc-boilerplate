@@ -1,0 +1,9 @@
+@import 'theme-base.scss';
+@import 'theme-generator.scss';
+
+.ant-layout{
+  @include themify($themes){
+    background-color: themed('bodyBackgroundColor');
+  }
+  color:#111;
+}

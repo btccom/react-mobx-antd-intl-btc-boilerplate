@@ -1,0 +1,85 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-width: 1200px;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: hidden;
+  //background-color: #f0f2f5;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e6e6e6;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+
+h1{
+  font-size:18px;
+}
+
+h2{
+  font-size: 16px;
+}
+
+h3{
+  font-size: 14px;
+}
+
+h4{
+  font-size: 12px;
+}
+
+.cf:after{
+  content:'.';
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+.cf{
+  zoom:1;
+}
+
+.disabled{
+  cursor: not-allowed !important;
+  pointer-events:none !important;
+  background: #eee !important;
+  opacity: 1;
+  *{
+    cursor: not-allowed !important;
+  }
+}
+
+.relative{
+  position: relative;
+}
+
+a.disabled-link{
+  pointer-events:none !important;
+  opacity: 1;
+  color:rgba(0,0,0,0.65);
+  *{
+    pointer-events:none !important;
+  }
+}
+
+

@@ -1,0 +1,21 @@
+.breadcrumbbar{
+  width:100%;
+  height: 60px;
+  background: #fff;
+  margin-bottom: 20px;
+  line-height: 60px;
+  border-bottom: 1px solid #E8E8E8;
+
+  .breadcrumbbar-title{
+    float: left;
+    font-size:20px;
+    font-weight:500;
+    color:rgba(0,0,0,0.85);
+  }
+
+  .breadcrumb{
+    float: right;
+    padding-top: 20px;
+  }
+
+}

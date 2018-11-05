@@ -1,0 +1,66 @@
+.simple-pagination {
+  color: #475669;
+  user-select: none;
+
+  li {
+    float: left;
+  }
+
+  @mixin page-button($width, $height, $color: #475669, $bgcolor: #fff) {
+    color: $color;
+    border: 1px solid #d3dce6;
+    width: $width;
+    height: $height;
+    line-height: $height;
+    text-align: center;
+    
+    background-color: $bgcolor;
+    cursor: pointer;
+  }
+
+  .page-first,
+  .page-last {
+    @include page-button(40px, 28px);
+    border-radius: 2px;
+  }
+
+  .page-display {
+    margin: 0 8px;
+  }
+
+  .page-previous,
+  .page-next{
+    @include page-button(28px, 28px);
+    display:inline-block;
+    border-radius: 2px;
+    i{
+      position: relative;
+    top: -1px;
+    }
+    
+  }
+  .page-previous{
+    border-radius: 2px 0 0 2px;
+  }
+  .page-next {
+    border-radius: 0 2px 2px 0;
+  }
+
+  .page-num {
+    @include page-button(auto, 28px, rgba(0, 0, 0, 0.65), #ebf7fe);
+    border-left: 0;
+    border-right: 0;
+    padding: 0 6px;
+    display:inline-block;
+    cursor: default;
+  }
+
+  .page-size-control {
+    .ant-btn {
+      height: 28px;
+      margin-left: 8px;
+      border-radius: 2px;
+      border:1px solid #D3DCE6;
+    }
+  }
+}

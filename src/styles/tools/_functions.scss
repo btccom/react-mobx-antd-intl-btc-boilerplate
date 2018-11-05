@@ -1,0 +1,11 @@
+// Functions
+
+// Convert pixels to rems
+@function remy($value, $base: 1px) {
+  @return ($value / $base) * 1rem;
+}
+
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

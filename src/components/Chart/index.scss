@@ -1,0 +1,70 @@
+.chart-container {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  .micro-chart-wrap {
+    flex: 1;
+  }
+}
+
+.doughnulegend-item {
+  margin-bottom: 11px;
+
+  span:not(:last-child) {
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: bottom;
+  }
+  
+  .legend-icon {
+    width: 18px;
+    height: 18px;
+    background: url(icon_unknown.png);
+    background-size: 18px 18px;
+    margin-right: 20px;
+  }
+
+  .lengend-value{
+    width:55px;
+    text-align: right;
+    display: inline-block;
+    &.large-size-value{
+      width:78px;
+    }
+  }
+  
+  .legend-name {
+    position: relative;
+    padding-left: 14px;
+    padding-right: 8px;
+    margin-right: 8px;
+    width:120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+  
+    .symbol {
+      position: absolute;
+      display: inline-block;
+      background: #c00;
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 8px;
+      top: 7px;
+      left: 0;
+    }
+    &:after {
+      position: absolute;
+      display: inline-block;
+      background: #d9d9d9;
+      content: '';
+      width: 1px;
+      height: 12px;
+      top: 6px;
+      right: 0;
+    }
+  }
+}
+

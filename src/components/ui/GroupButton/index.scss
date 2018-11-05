@@ -1,0 +1,13 @@
+.group-button{
+  user-select: none;
+  .ant-radio-button-wrapper{
+    width:88px;
+    text-align: center;
+    border: 1px solid #D3DCE6;
+    border-left: 0;
+  }
+  .ant-radio-button-wrapper:first-child {
+    border-radius: 4px 0 0 4px;
+    border-left: 1px solid #D3DCE6;
+}
+}
