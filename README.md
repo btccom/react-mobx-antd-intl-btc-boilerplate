@@ -26,7 +26,9 @@ npm install
 
 ### Usage
 
-#### Start project on local server (go to localhost:8083)
+#### Start project on local server 
+#### Set host: 127.0.0.1 local.btcfe.com
+#### (go to : http://local.btcfe.com:8083)
 
 ```
 yarn run dev
@@ -35,6 +37,7 @@ or
 ```
 npm run dev
 ```
+`
 
 #### Build project (in "dist" folder):
 
@@ -45,6 +48,4 @@ or
 ```
 npm run build
 ```
-
-#### Preview minified production-ready bundle (go to localhost:3000)
 
