@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const AntdScssThemePlugin = require('antd-scss-theme-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const GitRevisionPlugin = require('git-revision-webpack-plugin');
+gitRevisionPlugin = new GitRevisionPlugin();
+
 module.exports = {
   entry: {
     vendor: ['react', 'react-dom', 'react-router', 'moment'],
@@ -124,11 +127,14 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-        // APP_VERSION: JSON.stringify(process.env.APP_VERSION),
-        // APP_COIN_TYPE: JSON.stringify(process.env.APP_COIN_TYPE)
-        APP_VERSION: JSON.stringify('v1'),
-        APP_COIN_TYPE: JSON.stringify('eth')
+        NODE_ENV: JSON.stringify('development'),
+        APP_VERSION: JSON.stringify(process.env.APP_VERSION),
+        APP_COIN_TYPE: JSON.stringify(process.env.APP_COIN_TYPE)
+      },
+      revisionInfo: {
+        VERSION: JSON.stringify(gitRevisionPlugin.version()),
+        COMMITHASH: JSON.stringify(gitRevisionPlugin.commithash()),
+        BRANCH: JSON.stringify(gitRevisionPlugin.branch())
       }
     }),
     new AntdScssThemePlugin('./src/styles/themes/antd-theme.scss'),

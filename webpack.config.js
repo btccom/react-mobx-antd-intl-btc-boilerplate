@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AntdScssThemePlugin = require('antd-scss-theme-plugin');
+const GitRevisionPlugin = require('git-revision-webpack-plugin');
+gitRevisionPlugin = new GitRevisionPlugin();
 
 module.exports = {
   entry: [
@@ -133,6 +135,11 @@ module.exports = {
         NODE_ENV: JSON.stringify('development'),
         APP_VERSION: JSON.stringify(process.env.APP_VERSION),
         APP_COIN_TYPE: JSON.stringify(process.env.APP_COIN_TYPE)
+      },
+      revisionInfo: {
+        VERSION: JSON.stringify(gitRevisionPlugin.version()),
+        COMMITHASH: JSON.stringify(gitRevisionPlugin.commithash()),
+        BRANCH: JSON.stringify(gitRevisionPlugin.branch())
       }
     }),
 
