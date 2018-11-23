@@ -16,17 +16,6 @@ import('./styles/main.scss');
 
 const store = rehydrate();
 
-//add revision info to html when deploy
-var revision = document.createComment(`
-
-Version: ${revisionInfo.VERSION}
-CommitHash:${revisionInfo.COMMITHASH}
-Branch:${revisionInfo.BRANCH}
-Date:${new Date()}
-
-`);
-document.head.appendChild(revision);
-
 const renderApp = Component => {
   const browserHistory = createBrowserHistory();
   const routeStore = new RouterStore();
@@ -51,11 +40,11 @@ const renderApp = Component => {
 
 if (isProduction) {
   var revisionInfo = document.createComment(`
-    Version: ${commitInfo.VERSION}
-    CommitHash:${commitInfo.COMMITHASH}
-    Branch:${commitInfo.BRANCH}
-    Date:${new Date()}
-`);
+      Version: ${commitInfo.VERSION}
+      CommitHash:${commitInfo.COMMITHASH}
+      Branch:${commitInfo.BRANCH}
+      Date:${new Date()}
+  `);
   document.head.appendChild(revisionInfo);
   window.onload = () => {
     renderApp(App);
