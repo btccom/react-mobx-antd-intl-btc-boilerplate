@@ -4,6 +4,8 @@ const merge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AntdScssThemePlugin = require('antd-scss-theme-plugin');
+const GitRevisionPlugin = require('git-revision-webpack-plugin');
+gitRevisionPlugin = new GitRevisionPlugin();
 
 module.exports = merge(commonConfig, {
   resolve: {

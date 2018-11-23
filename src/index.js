@@ -16,6 +16,17 @@ import('./styles/main.scss');
 
 const store = rehydrate();
 
+//add revision info to html when deploy
+var revision = document.createComment(`
+
+Version: ${revisionInfo.VERSION}
+CommitHash:${revisionInfo.COMMITHASH}
+Branch:${revisionInfo.BRANCH}
+Date:${new Date()}
+
+`);
+document.head.appendChild(revision);
+
 const renderApp = Component => {
   const browserHistory = createBrowserHistory();
   const routeStore = new RouterStore();
