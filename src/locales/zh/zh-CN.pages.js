@@ -17,7 +17,9 @@ const pageMesage = {
       footer: {}
     },
     demo: {
-      title: '结合React、Mobx、Antd、React Intl 的前端开发模板'
+      title: '结合React、Mobx、Antd、React Intl 的前端开发模板',
+      multText:
+        '使用CSS动画为页面添加一些动作的简单方法。 <br>在向下滚动时为延迟计时添加一些JavaScript，您可以获得一些不错的用户交互。 同时提供这两个库的两个库是Animate.css和Wow.js. 让我们开始将它们添加到{react}应用程序中（如果需要创建一个，请尝试使用create-react-app）。'
     }
   }
 };

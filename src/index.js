@@ -39,6 +39,13 @@ const renderApp = Component => {
 };
 
 if (isProduction) {
+  var revisionInfo = document.createComment(`
+    Version: ${commitInfo.VERSION}
+    CommitHash:${commitInfo.COMMITHASH}
+    Branch:${commitInfo.BRANCH}
+    Date:${new Date()}
+`);
+  document.head.appendChild(revisionInfo);
   window.onload = () => {
     renderApp(App);
   };

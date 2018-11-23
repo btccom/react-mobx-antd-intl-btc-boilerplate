@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 import Ts from 'Trans';
+import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 import './index.scss';
 
@@ -22,6 +23,17 @@ export default class Demo extends Component {
       <div className="view-width page-container">
         <h2>
           <Ts transKey="pages.demo.title" />
+          <FormattedMessage
+            id="pages.demo.multText"
+            values={{ react: <b style={{ color: '#0CC' }}>Eric</b> }}
+          />
+
+          <hr style={{ marginTop: 15, marginBottom: 15 }} />
+
+          <FormattedHTMLMessage
+            id="pages.demo.multText"
+            values={{ react: 'Eric' }}
+          />
         </h2>
       </div>
     );
